@@ -1,0 +1,21 @@
+{% load compress %} {% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% block title %}Django + Tailwind CSS + Flowbite{% endblock title %}
+    </title>
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}" />
+    {% endcompress %}
+  </head>
+  <body class="bg-green-50">
+    <main class="container mx-auto mt-4">
+      {% block page_content %}{% endblock page_content %}
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
