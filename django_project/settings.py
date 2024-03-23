@@ -32,6 +32,7 @@ CSRF_TRUSTED_ORIGINS = ["https://*.replit.dev", "https://*.replit.app","https://
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'things.apps.ThingsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
